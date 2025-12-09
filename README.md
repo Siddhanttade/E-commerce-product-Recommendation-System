@@ -46,9 +46,9 @@ E-commerce/
 
 ### Prerequisites
 
-- **Node.js** v14 or higher
-- **MongoDB** (local or Atlas)
-- **Groq API Key** ([Get one here](https://console.groq.com))
+- Node.js v14 or higher
+- MongoDB (local or Atlas)
+- Groq API Key ([Get one here](https://console.groq.com))
 
 ### Installation
 
@@ -98,7 +98,7 @@ Behaviors seeded.
 
 5. **Start the servers**
 
-**Terminal 1 - Backend:**
+Terminal 1 - Backend:
 ```bash
 cd server
 node index.js
@@ -118,25 +118,25 @@ Navigate to `http://localhost:5173` in your browser.
 
 ### Selecting Preferences
 
-1. **Choose Categories**: Click on category buttons (Electronics, Fitness, Office, Kitchen)
-2. **Select Interests**: Click on interest tags (gaming, workout, ergonomic, etc.)
-3. **Set Budget**: Adjust the price slider to your budget range
-4. **Get Recommendations**: Click "✨ Get AI Recommendations"
+1. Choose Categories: Click on category buttons (Electronics, Fitness, Office, Kitchen)
+2. Select Interests: Click on interest tags (gaming, workout, ergonomic, etc.)
+3. Set Budget: Adjust the price slider to your budget range
+4. Get Recommendations: Click "✨ Get AI Recommendations"
 
 ### How It Works
 
-- **4 Products Per Category**: If you select 2 categories, you'll get 8 products (4 from each)
-- **LLM Selection**: Groq's `llama-3.1-8b-instant` model selects the best products based on your interests
-- **Smart Explanations**: Each product includes a detailed explanation of why it matches your preferences
-- **Fallback Logic**: If LLM fails, the system uses smart scoring (tag matches + ratings)
+- 4 Products Per Category: If you select 2 categories, you'll get 8 products (4 from each)
+- LLM Selection: Groq's `llama-3.1-8b-instant` model selects the best products based on your interests
+- Smart Explanations: Each product includes a detailed explanation of why it matches your preferences
+- Fallback Logic: If LLM fails, the system uses smart scoring (tag matches + ratings)
 
 ## 🗄️ Database
 
 ### Collections
 
-- **products**: 100 products across 4 categories (25 each)
-- **users**: Sample user personas
-- **behaviors**: User interaction data (views, carts, purchases)
+- products: 100 products across 4 categories (25 each)
+- users: Sample user personas
+- behaviors: User interaction data (views, carts, purchases)
 
 ### Product Schema
 
@@ -157,8 +157,8 @@ Navigate to `http://localhost:5173` in your browser.
 
 The system uses Groq's **llama-3.1-8b-instant** model for:
 
-1. **Product Selection**: Choosing the best 4 products per category based on user preferences
-2. **Explanation Generation**: Creating personalized 2-3 sentence explanations
+1. Product Selection: Choosing the best 4 products per category based on user preferences
+2. Explanation Generation: Creating personalized 2-3 sentence explanations
 
 ### Example LLM Prompt (Explanation)
 
@@ -226,17 +226,17 @@ Get personalized recommendations based on user preferences.
 ## 🎨 Frontend
 
 Built with:
-- **React** 18
-- **Vite** 4.5
-- **Axios** for API calls
-- **Vanilla CSS** with modern design
+- React 18
+- Vite 4.5
+- Axios for API calls
+- Vanilla CSS with modern design
 
 ### Key Components
 
-- **Preference Controls**: Category buttons, interest tags, price slider
-- **Recommendations Grid**: Responsive product cards
-- **Loading State**: Spinner with "AI is analyzing..." message
-- **Product Cards**: Display name, category, price, rating, tags, and AI explanation
+- Preference Controls: Category buttons, interest tags, price slider
+- Recommendations Grid: Responsive product cards
+- Loading State: Spinner with "AI is analyzing..." message
+- Product Cards: Display name, category, price, rating, tags, and AI explanation
 
 ## 🔧 Configuration
 
@@ -268,37 +268,24 @@ const categoryRecs = await getRecommendationsPerCategory(
 ## 🐛 Troubleshooting
 
 ### "Groq API Error: model_decommissioned"
-- **Solution**: The model has been updated to `llama-3.1-8b-instant`. Make sure you have the latest code.
+- Solution: The model has been updated to `llama-3.1-8b-instant`. Make sure you have the latest code.
 
 ### "MongoDB Connection Error"
-- **Check**: MongoDB is running (`mongod` command)
-- **Check**: Connection string in `.env` is correct
-- **Try**: Use MongoDB Atlas cloud database
+- Check: MongoDB is running (`mongod` command)
+- Check: Connection string in `.env` is correct
+- Try: Use MongoDB Atlas cloud database
 
 ### No recommendations showing
-- **Check**: Database is seeded (`node seed.js`)
-- **Check**: Server is running on port 3000
-- **Check**: Groq API key is valid in `.env`
+- Check: Database is seeded (`node seed.js`)
+- Check: Server is running on port 3000
+- Check: Groq API key is valid in `.env`
 
 ### Generic explanations
-- **Reason**: LLM API might be failing, using fallback logic
-- **Check**: Groq API key and quota
-- **Check**: Server logs for API errors
+- Reason: LLM API might be failing, using fallback logic
+- Check: Groq API key and quota
+- Check: Server logs for API errors
 
-## 📝 License
 
-MIT License - feel free to use this project for learning or commercial purposes.
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📧 Support
-
-For issues or questions, please open an issue on GitHub.
-
----
-
-**Built with ❤️ using React, Node.js, MongoDB, and Groq LLM**
-# E-commerce-product-Recommendation-System
+Built with using React, Node.js, MongoDB, and Groq LLM
 # E-commerce-product-Recommendation-System
